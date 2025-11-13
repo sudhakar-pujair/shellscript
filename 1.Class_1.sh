@@ -17,9 +17,8 @@ curl -sL ${URL} | jq ".results[].name" -r
 ALL_POKEMON=$(curl -sL ${URL} | jq ".results[].name" -r)
 
 #Running A For Loop To Print Pokemon One By One
-for POKEMON in ${ALL_POKEMON}
-do
-echo "The Name Of The Pokemon Is ${POKEMON}."
-echo '--------------------------------------'
+for POKEMON in ${ALL_POKEMON}; do
+	echo "The Name Of The Pokemon Is ${POKEMON}."
+	echo '--------------------------------------'
 done
 #End of Script
